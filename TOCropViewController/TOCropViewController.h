@@ -21,6 +21,7 @@
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "TOCropView.h"
 
 @class TOCropViewController;
 
@@ -62,6 +63,9 @@
  The original, uncropped image that was passed to this controller.
  */
 @property (nonatomic, readonly) UIImage *image;
+
+@property (nonatomic, readonly) TOCropView *cropView;
+
 
 /**
  The view controller's delegate that will return the resulting cropped image, as well as crop information

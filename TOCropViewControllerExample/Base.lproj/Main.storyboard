@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E8L-zH-S1l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HhP-Hf-ygN">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="fMg-XW-m2y">
-            <objects>
-                <navigationController id="E8L-zH-S1l" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="thl-q2-Pus">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="T4k-zz-B0l" kind="relationship" relationship="rootViewController" id="hh7-hy-g7B"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WEq-M1-aqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-490.5" y="357"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="XbJ-md-Vw4">
             <objects>
@@ -53,7 +37,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORJ-Ax-cXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="355" y="357"/>
+            <point key="canvasLocation" x="-277" y="217"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d8W-2q-9hD">
+            <objects>
+                <viewController id="ntg-jq-ZBm" customClass="ViewController" customModule="TOCropViewControllerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rBc-2W-aXd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZQW-gY-hS1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NA8-dE-j9g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNi-U2-05A">
+                                <rect key="frame" x="184" y="43" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openCropper:" destination="ntg-jq-ZBm" eventType="touchUpInside" id="4Vk-5n-7xk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="to9-BN-UzL">
+                                <rect key="frame" x="0.0" y="173" width="414" height="368"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="to9-BN-UzL" firstAttribute="top" secondItem="KNi-U2-05A" secondAttribute="bottom" constant="100" id="97g-rP-uHu"/>
+                            <constraint firstItem="to9-BN-UzL" firstAttribute="height" secondItem="NA8-dE-j9g" secondAttribute="height" multiplier="0.5" id="Fv9-Eg-ACy"/>
+                            <constraint firstItem="KNi-U2-05A" firstAttribute="centerX" secondItem="NA8-dE-j9g" secondAttribute="centerX" id="Nya-pw-wiX"/>
+                            <constraint firstItem="to9-BN-UzL" firstAttribute="centerX" secondItem="NA8-dE-j9g" secondAttribute="centerX" id="hmN-EQ-V5T"/>
+                            <constraint firstItem="to9-BN-UzL" firstAttribute="width" secondItem="NA8-dE-j9g" secondAttribute="width" id="iuH-55-KnS"/>
+                            <constraint firstItem="KNi-U2-05A" firstAttribute="top" secondItem="rBc-2W-aXd" secondAttribute="bottom" constant="23" id="n5M-NE-BQf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rpv-PN-Den"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="imageView" destination="to9-BN-UzL" id="ne4-4H-xeg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swP-aJ-Qs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="580"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iev-YV-axN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HhP-Hf-ygN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkT-86-qXc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ntg-jq-ZBm" kind="relationship" relationship="rootViewController" id="Sel-EG-ycy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IB-6i-bI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="580"/>
         </scene>
     </scenes>
 </document>
