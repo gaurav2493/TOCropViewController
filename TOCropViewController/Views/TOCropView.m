@@ -242,6 +242,8 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
     self.originalCropBoxSize = self.cropBoxFrame.size;
     
     [self matchForegroundToBackground];
+    CGSize aspectRatio = CGSizeMake(1.0, 1.0);
+    [self setAspectLockEnabledWithAspectRatio:aspectRatio animated:YES];
 }
 
 - (void)prepareforRotation
